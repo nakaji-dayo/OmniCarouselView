@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'OmniCarouselView_Example', :exclusive => true do
+  pod 'OmniCarouselView', :path => '../'
+end
+
+target 'OmniCarouselView_Tests', :exclusive => true do
+  pod 'OmniCarouselView', :path => '../'
+
+  pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0'
+end
