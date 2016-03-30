@@ -27,3 +27,4 @@ nakaji-dayo, nakaji.dayo@gmail.com
 ## License
 
 OmniCarouselView is available under the MIT license. See the LICENSE file for more info.
+
