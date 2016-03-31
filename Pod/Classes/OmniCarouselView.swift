@@ -8,12 +8,14 @@
 
 import UIKit
 
-public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     public enum Content {
         case ImageUrl(NSURL)
         case Image(UIImage)
         case View(UIView)
     }
+    
+    @IBInspectable var infinite: Bool = false
     
     let rightArrow = UIImageView(image: OmniCarouselView.loadImage("arrow-right"))
     let leftArrow = UIImageView(image: OmniCarouselView.loadImage("arrow-left"))
@@ -23,6 +25,8 @@ public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UIC
             self.contentsChanged()
         }
     }
+    private var loopContents: [Content]?
+    private var positionFixed = false
     
     let CellId = "carousel_cell"
     
@@ -39,6 +43,20 @@ public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UIC
     }    
     
     private func contentsChanged() {
+        if infinite {
+            // for infinite loop
+            self.loopContents = self.contents
+            if let item = self.contents.last {
+                self.loopContents?.insert(item, atIndex: 0)
+            }
+            if let item = self.contents.first {
+                self.loopContents?.append(item)
+            }
+            self.positionFixed = false
+        } else {
+            loopContents = nil
+        }
+
         self.reloadData()
         if contents.count > 1 {
             self.showArrows()
@@ -58,17 +76,27 @@ public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UIC
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contents.count
+        return loopContents?.count ?? contents.count
     }
     
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellId, forIndexPath: indexPath)
         if let cell = cell as? OmniCarouselViewCell {
-            let c = contents[indexPath.row];
+            let c = loopContents?[indexPath.row] ?? contents[indexPath.row];
             cell.setContent(c)
         }
         return cell;
     }
+    
+    public func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        if  infinite && !self.positionFixed {
+            self.positionFixed = true
+            // scroll to default position for infinite loop
+            let indexPath = NSIndexPath(forItem: 1, inSection: 0)
+            self.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Left, animated: false)
+        }
+    }
+    
     public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return self.bounds.size
     }
@@ -95,5 +123,19 @@ public class OmniCarouselView: UICollectionView, UICollectionViewDataSource, UIC
             return UIImage(named: name, inBundle: bundle, compatibleWithTraitCollection: nil)
         }
         return nil
+    }
+    
+    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        // Calculate where the collection view should be at the right-hand end item
+        if let lContents = self.loopContents {
+            let right = Int(self.frame.width) * (lContents.count - 1)
+            if Int(scrollView.contentOffset.x) >= right {
+                let indexPath = NSIndexPath(forItem: 1, inSection: 0)
+                self.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Left, animated: false)
+            } else if (scrollView.contentOffset.x == 0)  {
+                let indexPath = NSIndexPath(forItem: (lContents.count - 2), inSection: 0)
+                self.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Left, animated: false)
+            }
+        }
     }
 }
