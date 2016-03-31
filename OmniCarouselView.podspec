@@ -17,7 +17,13 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-hoge
+OmniCarouselView is a simple carousel(slideshow) view in Swift.
+It's based UICollectionView.
+
+pages(slides) can contain
+- UIImage
+- NSURL of image
+- UIView
                        DESC
 
   s.homepage         = "https://github.com/nakaji-dayo/OmniCarouselView"
