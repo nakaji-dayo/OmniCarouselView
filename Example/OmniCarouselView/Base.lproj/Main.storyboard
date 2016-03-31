@@ -69,21 +69,50 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5QR-wd-f7b" customClass="OmniCarouselView" customModule="OmniCarouselView">
+                                        <rect key="frame" x="4" y="616" width="300" height="300"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5QR-wd-f7b" secondAttribute="height" multiplier="1:1" id="l3u-MS-06t"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wb3-fg-ZLz">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yip-aS-Zic">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cPK-Me-J7u" secondAttribute="trailing" constant="4" id="3Kb-yI-YVr"/>
                                     <constraint firstAttribute="bottom" secondItem="cPK-Me-J7u" secondAttribute="bottom" constant="700" id="4k4-8w-gMT"/>
+                                    <constraint firstItem="5QR-wd-f7b" firstAttribute="top" secondItem="lkX-VV-CBN" secondAttribute="bottom" constant="8" id="FSc-hn-DBG"/>
                                     <constraint firstAttribute="trailing" secondItem="lkX-VV-CBN" secondAttribute="trailing" constant="4" id="JPj-bm-5Ut"/>
                                     <constraint firstItem="cPK-Me-J7u" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="SC1-gf-hT0"/>
+                                    <constraint firstAttribute="bottom" secondItem="5QR-wd-f7b" secondAttribute="bottom" constant="84" id="VbB-vN-Dzr"/>
                                     <constraint firstItem="lkX-VV-CBN" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="YPv-C2-Msz"/>
                                     <constraint firstItem="lkX-VV-CBN" firstAttribute="top" secondItem="cPK-Me-J7u" secondAttribute="bottom" constant="8" id="d4k-Ux-TZA"/>
+                                    <constraint firstItem="5QR-wd-f7b" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="idZ-QP-SL9"/>
                                     <constraint firstItem="cPK-Me-J7u" firstAttribute="top" secondItem="Xra-EY-be9" secondAttribute="top" id="ijy-Uu-QBG"/>
+                                    <constraint firstAttribute="trailing" secondItem="5QR-wd-f7b" secondAttribute="trailing" constant="4" id="mJ7-bX-VdJ"/>
                                     <constraint firstAttribute="bottom" secondItem="lkX-VV-CBN" secondAttribute="bottom" constant="392" id="r9b-yV-Uc9"/>
                                     <constraint firstItem="cPK-Me-J7u" firstAttribute="centerX" secondItem="Xra-EY-be9" secondAttribute="centerX" id="tA9-Od-USH"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4k4-8w-gMT"/>
+                                        <exclude reference="r9b-yV-Uc9"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -101,6 +130,7 @@
                     <connections>
                         <outlet property="carouselView1" destination="cPK-Me-J7u" id="roT-lT-zT5"/>
                         <outlet property="carouselView2" destination="lkX-VV-CBN" id="ykU-vM-g8v"/>
+                        <outlet property="carouselView3" destination="5QR-wd-f7b" id="IBh-sQ-tJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
