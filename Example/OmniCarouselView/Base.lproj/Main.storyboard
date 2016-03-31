@@ -22,103 +22,45 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-EY-be9">
                                 <rect key="frame" x="-4" y="0.0" width="308" height="1000"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lkX-VV-CBN" customClass="OmniCarouselView" customModule="OmniCarouselView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-vV-rJr" customClass="OmniCarouselView" customModule="OmniCarouselView">
                                         <rect key="frame" x="4" y="308" width="300" height="300"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="lkX-VV-CBN" secondAttribute="height" multiplier="1:1" id="SMv-I5-q0v"/>
+                                            <constraint firstAttribute="width" secondItem="7pr-vV-rJr" secondAttribute="height" multiplier="1:1" id="8cl-KZ-Gmz"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vcR-3W-1tC">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PuA-H9-Ox4">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5QR-wd-f7b" customClass="OmniCarouselView" customModule="OmniCarouselView">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYF-1f-Mqb" customClass="OmniCarouselView" customModule="OmniCarouselView">
                                         <rect key="frame" x="4" y="616" width="300" height="300"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.98108911143071464" blue="0.78546916338423856" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="5QR-wd-f7b" secondAttribute="height" multiplier="1:1" id="l3u-MS-06t"/>
+                                            <constraint firstAttribute="width" secondItem="pYF-1f-Mqb" secondAttribute="height" multiplier="1:1" id="7ZK-Ae-F8C"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wb3-fg-ZLz">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yip-aS-Zic">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-Me-J7u" customClass="OmniCarouselView" customModule="OmniCarouselView">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYh-uh-6zV" customClass="OmniCarouselView" customModule="OmniCarouselView">
                                         <rect key="frame" x="4" y="0.0" width="300" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="cPK-Me-J7u" secondAttribute="height" multiplier="1:1" id="039-kv-tRD"/>
+                                            <constraint firstAttribute="width" secondItem="xYh-uh-6zV" secondAttribute="height" multiplier="1:1" id="qdA-xF-xIv"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Ft-GQ-xNK">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OJu-gm-Ppj">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCycle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="infinite" value="YES"/>
                                         </userDefinedRuntimeAttributes>
-                                    </collectionView>
+                                    </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cPK-Me-J7u" secondAttribute="trailing" constant="4" id="3Kb-yI-YVr"/>
-                                    <constraint firstAttribute="bottom" secondItem="cPK-Me-J7u" secondAttribute="bottom" constant="700" id="4k4-8w-gMT"/>
-                                    <constraint firstItem="5QR-wd-f7b" firstAttribute="top" secondItem="lkX-VV-CBN" secondAttribute="bottom" constant="8" id="FSc-hn-DBG"/>
-                                    <constraint firstAttribute="trailing" secondItem="lkX-VV-CBN" secondAttribute="trailing" constant="4" id="JPj-bm-5Ut"/>
-                                    <constraint firstItem="cPK-Me-J7u" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="SC1-gf-hT0"/>
-                                    <constraint firstAttribute="bottom" secondItem="5QR-wd-f7b" secondAttribute="bottom" constant="84" id="VbB-vN-Dzr"/>
-                                    <constraint firstItem="lkX-VV-CBN" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="YPv-C2-Msz"/>
-                                    <constraint firstItem="lkX-VV-CBN" firstAttribute="top" secondItem="cPK-Me-J7u" secondAttribute="bottom" constant="8" id="d4k-Ux-TZA"/>
-                                    <constraint firstItem="5QR-wd-f7b" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="idZ-QP-SL9"/>
-                                    <constraint firstItem="cPK-Me-J7u" firstAttribute="top" secondItem="Xra-EY-be9" secondAttribute="top" id="ijy-Uu-QBG"/>
-                                    <constraint firstAttribute="trailing" secondItem="5QR-wd-f7b" secondAttribute="trailing" constant="4" id="mJ7-bX-VdJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="lkX-VV-CBN" secondAttribute="bottom" constant="392" id="r9b-yV-Uc9"/>
-                                    <constraint firstItem="cPK-Me-J7u" firstAttribute="centerX" secondItem="Xra-EY-be9" secondAttribute="centerX" id="tA9-Od-USH"/>
+                                    <constraint firstItem="xYh-uh-6zV" firstAttribute="centerX" secondItem="Xra-EY-be9" secondAttribute="centerX" id="3dg-PM-L3T"/>
+                                    <constraint firstItem="xYh-uh-6zV" firstAttribute="top" secondItem="Xra-EY-be9" secondAttribute="top" id="6t8-6J-tTN"/>
+                                    <constraint firstAttribute="trailing" secondItem="xYh-uh-6zV" secondAttribute="trailing" constant="4" id="9wd-dP-396"/>
+                                    <constraint firstItem="xYh-uh-6zV" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="IlE-TR-Yok"/>
+                                    <constraint firstItem="pYF-1f-Mqb" firstAttribute="top" secondItem="7pr-vV-rJr" secondAttribute="bottom" constant="8" id="MHX-pI-pYs"/>
+                                    <constraint firstItem="7pr-vV-rJr" firstAttribute="top" secondItem="xYh-uh-6zV" secondAttribute="bottom" constant="8" id="UYu-OX-p34"/>
+                                    <constraint firstAttribute="bottom" secondItem="pYF-1f-Mqb" secondAttribute="bottom" constant="84" id="a7g-0J-ew7"/>
+                                    <constraint firstItem="pYF-1f-Mqb" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="ncB-Qz-2bz"/>
+                                    <constraint firstItem="7pr-vV-rJr" firstAttribute="leading" secondItem="Xra-EY-be9" secondAttribute="leading" constant="4" id="xBb-Rw-7EA"/>
+                                    <constraint firstAttribute="trailing" secondItem="7pr-vV-rJr" secondAttribute="trailing" constant="4" id="xD8-m2-OFf"/>
+                                    <constraint firstAttribute="trailing" secondItem="pYF-1f-Mqb" secondAttribute="trailing" constant="4" id="xQQ-bM-h9d"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4k4-8w-gMT"/>
-                                        <exclude reference="r9b-yV-Uc9"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -132,9 +74,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="1000"/>
                     <connections>
-                        <outlet property="carouselView1" destination="cPK-Me-J7u" id="roT-lT-zT5"/>
-                        <outlet property="carouselView2" destination="lkX-VV-CBN" id="ykU-vM-g8v"/>
-                        <outlet property="carouselView3" destination="5QR-wd-f7b" id="IBh-sQ-tJm"/>
+                        <outlet property="carouselView1" destination="xYh-uh-6zV" id="eKW-tN-Ffj"/>
+                        <outlet property="carouselView2" destination="7pr-vV-rJr" id="bNF-FP-N2W"/>
+                        <outlet property="carouselView3" destination="pYF-1f-Mqb" id="QGy-QU-hjy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
