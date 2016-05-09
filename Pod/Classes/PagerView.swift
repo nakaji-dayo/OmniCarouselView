@@ -8,13 +8,13 @@
 
 import UIKit
 
-class PagerView: UIView {
+public class PagerView: UIView {
     var count: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
-    var current: Int = 0 {
+    public var current: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
@@ -24,7 +24,7 @@ class PagerView: UIView {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clearColor()
     }
-    
+
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     let margin:CGFloat = 4
@@ -40,7 +40,7 @@ class PagerView: UIView {
                 CGContextSetFillColorWithColor(ctx, UIColor.lightGrayColor().CGColor)
             }
             CGContextFillPath(ctx);
-            
+
             x += height + margin
         }
     }
