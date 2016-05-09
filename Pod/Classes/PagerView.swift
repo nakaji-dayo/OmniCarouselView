@@ -20,7 +20,7 @@ public class PagerView: UIView {
         }
     }
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clearColor()
     }
@@ -28,7 +28,7 @@ public class PagerView: UIView {
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     let margin:CGFloat = 4
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         let height = self.frame.height
         let ctx = UIGraphicsGetCurrentContext();
         var x = (self.frame.width - (height + margin) * CGFloat(count)) / 2
